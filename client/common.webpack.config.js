@@ -10,7 +10,7 @@ module.exports = {
         publicPath: "/",
     },
     externals: {
-        CodeDocs: "codeexamples",
+        CodeExamples: "codeexamples",
     },
     resolve: {
         extensions: [".js", ".ts", ".scss", ".css"],

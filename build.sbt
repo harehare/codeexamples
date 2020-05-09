@@ -23,7 +23,7 @@ lazy val root = project
 lazy val client = project
   .in(file("client"))
   .settings(
-    name := "CodeDocs",
+    name := "CodeExamples",
     scalaJSUseMainModuleInitializer := true,
     resolvers += "jitpack" at "https://jitpack.io",
     scalacOptions += "-P:scalajs:sjsDefinedByDefault",
