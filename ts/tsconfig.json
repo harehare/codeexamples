@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "es2019",
+        "module": "esnext",
+        "removeComments": true,
+        "strict": false,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "node",
+        "declaration": true,
+        "lib": ["es2015", "dom"]
+    }
+}
