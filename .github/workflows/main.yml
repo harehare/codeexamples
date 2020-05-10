@@ -5,23 +5,26 @@ on:
             - master
 jobs:
     build:
-        name: build
         runs-on: ubuntu-latest
         steps:
             - name: Checkout Repo
-              uses: actions/checkout@master
+              uses: actions/checkout@v2
             - name: Setup Sbt and Build
-              id: sbt
-              uses: lokkju/github-action-sbt@8-1.2.8-2.13.0
-              with:
-                  commands: fullOptJS::webpack
-                  sbt_project_directory: ./
+              uses: olafurpg/setup-scala@v7
+            - name: Run ScalaJs Build
+              run: sbt fullOptJS::webpack
             - name: Install Dependencies
               working-directory: ts
               run: npm install
             - name: npm build
               working-directory: ts
               run: npm run prod
+              env:
+                  FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+                  FIREBASE_AUTH_DOMAIN: ${{ secrets.FIREBASE_AUTH_DOMAIN }}
+                  FIREBASE_DATABASE_URL: ${{ secrets.FIREBASE_DATABASE_URL }}
+                  FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
+                  FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
             - name: Deploy to Firebase
               uses: w9jds/firebase-action@master
               with:
