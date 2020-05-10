@@ -140,11 +140,12 @@ body {
         align-items: center;
         justify-content: space-between;
         font-weight: 600;
-        .text {
-            font-size: 1.05rem;
-            color: var(--text-color);
-            background-color: transparent;
-        }
+    }
+
+    .text {
+        font-size: 1.05rem;
+        color: var(--text-color);
+        background-color: transparent;
     }
 
     .textarea {

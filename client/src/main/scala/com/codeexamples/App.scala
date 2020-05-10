@@ -8,6 +8,7 @@ import com.codeexamples.facade.Firebase
 import japgolly.scalajs.react._
 import japgolly.scalajs.react.extra.router.{BaseUrl, Resolution, Router, RouterConfigDsl, RouterCtl}
 import japgolly.scalajs.react.vdom.html_<^._
+import java.net.URLDecoder
 import org.scalajs.dom
 import mouse.option._
 
@@ -137,10 +138,10 @@ object App extends AppModule {
         p =>
           p match {
             case CategoryPage(categoryId) =>
-              s"${categoryService.getCategoryName(categoryId.toString())} | CODEDOCS"
+              s"${categoryService.getCategoryName(categoryId.toString())} | CODE EXAMPLES"
             case CodePage(categoryId, codeId, codeName) =>
-              s"${categoryService.getCategoryName(categoryId.toString())} | ${codeName} | CODEDOCS"
-            case _ => "CODEDOCS"
+              s"${categoryService.getCategoryName(categoryId.toString())} | ${URLDecoder.decode(codeName, "utf-8")} | CODE EXAMPLES"
+            case _ => "CODE EXAMPLES"
           }
       )
       .renderWith(layout)

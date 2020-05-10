@@ -18,6 +18,7 @@ class CategoryService(repository: CategoryRepository) {
     Category("d5804ea6-bd3f-44b0-baac-4deaac40a79f", "css3", "CSS", new js.Date()),
     Category("93a9e200-2e8f-436a-ba52-bff374fe5d1e", "docker", "Docker", new js.Date()),
     Category("60463300-4268-4cc4-8be9-67eda4e43b10", "elm", "Elm", new js.Date()),
+    Category("a9a9e3b0-067f-427a-85c5-772a37d661ba", "firebase", "Firebase", new js.Date()),
     Category("997a3775-0002-4e29-a21b-c3c1343dbec4", "git", "git", new js.Date()),
     Category("f99ad6a7-052a-4ff1-89cd-04ed249f1f3e", "go", "Golang", new js.Date()),
     Category("2525e2a2-b4af-4d91-be3f-3d0fb49c73af", "haskell", "Haskell", new js.Date()),

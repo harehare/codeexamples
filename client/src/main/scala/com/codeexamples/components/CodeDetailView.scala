@@ -97,8 +97,8 @@ object CodeDetailView {
                   else
                     <.div()
                 )
-              else <.div(^.className := "title", <.div(^.className := "text", p.code.name)),
-            <.div(^.className := "text", p.code.name)
+              else <.div(^.className := "title", <.div(^.className := "input", p.code.name)),
+            <.div(^.className := "title", <.div(^.className := "input", p.code.name))
           ),
           <.div(
             ^.className := "description",
